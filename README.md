@@ -78,7 +78,7 @@ print(hotp.generate(42)
 
 ### Supported parameters
 #### Hash Functions
-SwiftOTP supports HMAC with SHA1 as specified in [RFC 4226](https://tools.ietf.org/html/rfc4226), as well as SHA256 and SHA512 added in [RFC 6238](https://tools.ietf.org/html/rfc6238). MD5 is **not** supported due to its unsuitability to produce reliable one time passwords.
+SwiftOTP supports HMAC with SHA1 as specified in [RFC 4226](https://tools.ietf.org/html/rfc4226), as well as SHA256 and SHA512 added in [RFC 6238](https://tools.ietf.org/html/rfc6238). MD5 is **not** supported due to its inability to produce reliable one time passwords.
 
 #### Digit Length
 Both the `TOTP` and `HOTP` objects only accept a digit length value between 6 and 8, as specified in [RFC 4226](https://tools.ietf.org/html/rfc4226). Both objects will return `nil` if an invalid digit length value is provided.
@@ -94,3 +94,5 @@ SwiftOTP depends on the following open-source projects:
 * [Base32](https://github.com/norio-nomura/Base32) by Norio Nomura ([License](https://github.com/norio-nomura/Base32/blob/master/LICENSE))
 
 Please include the respective licenses in addition to the SwiftOTP license in your project.
+
+Some parts of the password generator code were adapted from the [old Google Authenticator source](https://github.com/google/google-authenticator).
