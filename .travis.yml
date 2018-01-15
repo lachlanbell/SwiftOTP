@@ -1,7 +1,13 @@
 language: swift
-xcode_workspace: SwiftOTP.xcworkspace # path to your xcodeproj folder
+
+xcode_workspace: SwiftOTP.xcworkspace
 xcode_scheme: SwiftOTP
 osx_image: xcode9.2
 xcode_sdk: iphonesimulator11.2
+
 before_install:
   - pod repo update
+  - gem install xcpretty-travis-formatter
+script:
+  - set -o pipefail && xcodebuild -workspace SwiftOTP.xcworkspace -scheme SwiftOTP -sdk iphonesimulator ONLY_ACTIVE_ARCH=no | xcpretty -f `xcpretty-travis-formatter`
+  - set -o pipefail && xcodebuild test -workspace SwiftOTP.xcworkspace -scheme SwiftOTP -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.2' | xcpretty -f `xcpretty-travis-formatter`

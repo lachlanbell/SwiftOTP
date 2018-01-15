@@ -18,7 +18,6 @@ class TOTPTests: XCTestCase {
 	let dataSHA1 = "12345678901234567890".data(using: String.Encoding.ascii)!
 	let dataSHA256 = "12345678901234567890123456789012".data(using: String.Encoding.ascii)!
 	let dataSHA512 = "1234567890123456789012345678901234567890123456789012345678901234".data(using: String.Encoding.ascii)!
-	
 
 	func test01() {
 		let totp = TOTP(secret: dataSHA1, digits: 8, timeInterval: 30, algorithm: .sha1)
