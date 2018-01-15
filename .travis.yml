@@ -1,0 +1,5 @@
+language: swift
+xcode_workspace: SwiftOTP.xcworkspace # path to your xcodeproj folder
+xcode_scheme: SwiftOTP
+osx_image: xcode9.2
+xcode_sdk: iphonesimulator11.2
