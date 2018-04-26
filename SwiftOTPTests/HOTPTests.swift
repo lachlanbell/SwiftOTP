@@ -20,7 +20,7 @@ class HOTPTests: XCTestCase {
 	func testHOTP() {
 		let hotp = HOTP(secret: data)!
 		for i in 0...(expectedOTP.count - 1) {
-			XCTAssertEqual(hotp.generate(counter: i), expectedOTP[i])
+			XCTAssertEqual(hotp.generate(counter: UInt64(i)), expectedOTP[i])
 		}
 	}
 }
