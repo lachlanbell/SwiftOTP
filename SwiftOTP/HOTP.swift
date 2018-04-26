@@ -25,9 +25,9 @@ public struct HOTP {
 		}
 	}
 	
-	//Generate from comments
-	public func generate(counter: Int) -> String {
-		return GenerateOTP(secret: secret, algorithm: algorithm, counter: UInt64(counter), digits: digits)
+	//Generate from counter value
+	public func generate(counter: UInt64) -> String {
+		return GenerateOTP(secret: secret, algorithm: algorithm, counter: counter, digits: digits)
 	}
 	
 	//Check to see if digits value provided is between 6...8 (specified in RFC 4226)
