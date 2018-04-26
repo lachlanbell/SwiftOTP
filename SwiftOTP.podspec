@@ -16,6 +16,6 @@ s.ios.deployment_target = '9.0'
 
 s.source_files = 'SwiftOTP/**/*'
 
-s.dependency 'CryptoSwift', '~> 0.8.1'
+s.dependency 'CryptoSwift', '~> 0.8.0'
 end
 
