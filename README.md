@@ -84,9 +84,9 @@ SwiftOTP supports HMAC with SHA1 as specified in [RFC 4226](https://tools.ietf.o
 Both the `TOTP` and `HOTP` objects only accept a digit length value between 6 and 8, as specified in [RFC 4226](https://tools.ietf.org/html/rfc4226). Both objects will return `nil` if an invalid digit length value is provided.
 
 ## Older Swift Versions
-Use the corresponding branch for using an older Swift version (4.0 and greater):
+Use the corresponding branch for using an older Swift version (4.0 and greater). For example:
 ```ruby
-pod 'SwiftOTP', :git => 'https://github.com/lachlanbell/SwiftOTP.git', :branch => 'Swift-4.0'
+pod 'SwiftOTP', :git => 'https://github.com/lachlanbell/SwiftOTP.git', :branch => 'swift-4.0'
 ```
 
 ## License
