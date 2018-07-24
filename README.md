@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
 [![License](https://img.shields.io/cocoapods/l/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
-![Swift Version](https://img.shields.io/badge/Swift-4.0-orange.svg)
+![Swift Version](https://img.shields.io/badge/Swift-4.2-orange.svg)
 
 SwiftOTP is a pure Swift library for generating One Time Passwords (OTP) commonly used for two factor authentication. SwiftOTP supports both HMAC-Based One Time Passwords (HOTP) and Time Based One Time Passwords (TOTP) defined in [RFC 4226](https://tools.ietf.org/html/rfc4226) and [RFC 6238](https://tools.ietf.org/html/rfc6238) respectively.
 ## Installation
@@ -82,6 +82,12 @@ SwiftOTP supports HMAC with SHA1 as specified in [RFC 4226](https://tools.ietf.o
 
 #### Digit Length
 Both the `TOTP` and `HOTP` objects only accept a digit length value between 6 and 8, as specified in [RFC 4226](https://tools.ietf.org/html/rfc4226). Both objects will return `nil` if an invalid digit length value is provided.
+
+## Older Swift Versions
+Use the corresponding branch for using an older Swift version (4.0 and greater):
+```ruby
+pod 'SwiftOTP', :git => 'https://github.com/lachlanbell/SwiftOTP.git', :branch => 'Swift-4.0'
+```
 
 ## License
 
