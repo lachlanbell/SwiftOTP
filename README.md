@@ -73,7 +73,7 @@ Or in use:
 ```swift
 let data = base32DecodeToData("ABCDEFGHIJKLMNOP")!
 let hotp = HOTP(secret: data)!
-print(hotp.generate(42)
+print(hotp.generate(42))
 ```
 
 ### Supported parameters
