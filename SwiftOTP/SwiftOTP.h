@@ -6,7 +6,7 @@
 //  Copyright © 2018 Lachlan Bell. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+import Foundation
 
 //! Project version number for SwiftOTP.
 FOUNDATION_EXPORT double SwiftOTPVersionNumber;
