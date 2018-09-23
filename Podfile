@@ -1,15 +1,18 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'SwiftOTP' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+use_frameworks!
 
+target 'SwiftOTP' do
   pod 'CryptoSwift', '>= 0.10.0'
 
-  target 'SwiftOTPTests' do
+end
+
+target 'SwiftOTP Mac' do
+  pod 'CryptoSwift', '>= 0.10.0'
+end
+
+target 'SwiftOTPTests' do
     inherit! :search_paths
     pod 'CryptoSwift', '>= 0.10.0'
   end
-
-end

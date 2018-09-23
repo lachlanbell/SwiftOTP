@@ -18,7 +18,5 @@
 	<string>0.1.4</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>NSPrincipalClass</key>
-	<string></string>
 </dict>
 </plist>
