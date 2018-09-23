@@ -6,7 +6,7 @@
 //  Copyright © 2018 Lachlan Bell. All rights reserved.
 //
 
-import Foundation
+#import <Foundation/Foundation.h>
 
 //! Project version number for SwiftOTP.
 FOUNDATION_EXPORT double SwiftOTPVersionNumber;
