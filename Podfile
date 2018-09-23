@@ -12,6 +12,14 @@ target 'SwiftOTP Mac' do
   pod 'CryptoSwift', '>= 0.10.0'
 end
 
+target 'SwiftOTP TV' do
+  pod 'CryptoSwift', '>= 0.10.0'
+end
+
+target 'SwiftOTP Watch' do
+  pod 'CryptoSwift', '>= 0.10.0'
+end
+
 target 'SwiftOTPTests' do
     inherit! :search_paths
     pod 'CryptoSwift', '>= 0.10.0'
