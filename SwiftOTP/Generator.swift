@@ -3,7 +3,7 @@
 //  SwiftOTP
 //
 //  Created by Lachlan Bell on 12/1/18.
-//	Copyright © 2018 Lachlan Bell. All rights reserved.
+//  Copyright © 2018 Lachlan Bell. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
