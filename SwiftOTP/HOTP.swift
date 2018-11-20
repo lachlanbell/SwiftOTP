@@ -14,7 +14,6 @@ public struct HOTP {
 	public let digits: Int
 	public let algorithm: OTPAlgorithm
 	
-	
 	/// Initialise counter-based one time password object
 	/// - parameter secret: Secret key data
 	/// - parameter digits: Number of digits for generated string in range 6...8, defaults to 6
@@ -25,9 +24,7 @@ public struct HOTP {
 		self.digits = digits
 		self.algorithm = algorithm
 		
-		guard validateDigits(digit: digits) else {
-			return nil
-		}
+		guard validateDigits(digit: digits) else { return nil }
 	}
 	
 	/// Generate one time password string from counter value

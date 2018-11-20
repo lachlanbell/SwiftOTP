@@ -49,12 +49,14 @@ internal class Generator {
 
 		// Convert int to string
 		let strNum = String(number)
+		
+		// Return string if adding leading zeros is not required
 		if strNum.count == digits {
 			return strNum
-		} else {
-			// Add zeros to start of string if not present
-			let prefixedZeros = String(repeatElement("0", count: (digits - strNum.count)))
-			return (prefixedZeros + strNum)
 		}
+		
+		// Add zeros to start of string if not present and return
+		let prefixedZeros = String(repeatElement("0", count: (digits - strNum.count)))
+		return (prefixedZeros + strNum)
 	}
 }

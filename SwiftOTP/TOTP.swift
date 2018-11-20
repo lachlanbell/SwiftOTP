@@ -15,7 +15,6 @@ public struct TOTP {
 	public let timeInterval: Int
 	public let algorithm: OTPAlgorithm
 	
-	
 	/// Initialise time-based one time password object
 	/// - parameter secret: Secret key data
 	/// - parameter digits: Number of digits for generated string in range 6...8, defaults to 6
@@ -27,9 +26,7 @@ public struct TOTP {
 		self.timeInterval = timeInterval
 		self.algorithm = algorithm
 		
-		guard validateDigits(digit: digits) else {
-			return nil
-		}
+		guard validateDigits(digit: digits) else { return nil }
 	}
 	
 	/// Generate one time password string from Date object
@@ -45,6 +42,7 @@ public struct TOTP {
 	/// - returns: One time password string, nil if error
 	/// - precondition: secondsPast1970 must be a positive integer
 	public func generate(secondsPast1970: Int) -> String? {
+		guard validateTime(time: secondsPast1970) else { return nil }
 		let counterValue = Int(floor(Double(secondsPast1970) / Double(timeInterval)))
 		return Generator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: UInt64(counterValue), digits: digits)
 	}
