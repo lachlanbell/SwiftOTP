@@ -47,7 +47,7 @@ if let totp = TOTP(secret: data) {
 ```
 Note: only `Int` values are accepted by this function, and must be positive.
 
-### HOTP (HMAC-Based One Time Password [counter-based])
+### HOTP (HMAC-Based One Time Password (counter-based))
 
 In addition to TOTP, SwiftOTP also supports the generation of counter-based HOTP passwords.
 #### Creation of an HOTP Object:
