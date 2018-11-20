@@ -10,7 +10,6 @@ import XCTest
 @testable import SwiftOTP
 
 class TOTPTests: XCTestCase {
-	
 	// Test values from RFC6238 Appendix B
 	// https://tools.ietf.org/html/rfc6238#appendix-B
 	// Test functions in order of test value table from the RFC
