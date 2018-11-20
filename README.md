@@ -6,27 +6,26 @@
 [![Platform](https://img.shields.io/cocoapods/p/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
 ![Swift Version](https://img.shields.io/badge/Swift-4.1-orange.svg)
 
-SwiftOTP is a pure Swift library for generating One Time Passwords (OTP) commonly used for two factor authentication. SwiftOTP supports both HMAC-Based One Time Passwords (HOTP) and Time Based One Time Passwords (TOTP) defined in [RFC 4226](https://tools.ietf.org/html/rfc4226) and [RFC 6238](https://tools.ietf.org/html/rfc6238) respectively.
+SwiftOTP is a Swift library for generating One Time Passwords (OTP) commonly used for two factor authentication. SwiftOTP supports both HMAC-Based One Time Passwords (HOTP) and Time Based One Time Passwords (TOTP) defined in [RFC 4226](https://tools.ietf.org/html/rfc4226) and [RFC 6238](https://tools.ietf.org/html/rfc6238) respectively.
 ## Installation
 
-SwiftOTP is available through [CocoaPods](http://cocoapods.org).  To install
-it, simply add the following line to your Podfile:
+SwiftOTP is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'SwiftOTP'
 ```
-Then run `pod install	` in the project directory to install.
+Then run `pod install` in the project directory to install.
 
 ## Usage
 ### TOTP (Time-Based One Time Password)
 
 #### Creation of a TOTP Object:
 ```swift
-let totp = TOTP(secret: data)!
+let totp = TOTP(secret: data)
 ```
 A TOTP Object can be created with the default settings (6 digits, 30sec time interval and using HMAC-SHA-1) as shown above, or the individual parameters can be set as shown below:
 ```swift
-let totp = TOTP(secret: data, digits: 6, timeInterval: 30, algorithm: .sha1)!
+let totp = TOTP(secret: data, digits: 6, timeInterval: 30, algorithm: .sha1)
 ```
 #### Generating TOTP Passwords
 After creating a TOTP object, a password can be generated for a point in time, either by using a `Date` object or a Unix time value using the `generate()` function
@@ -34,35 +33,41 @@ After creating a TOTP object, a password can be generated for a point in time, e
 For example, to get a password for the current time using a `TOTP` object named `totp`:
 
 ```swift
-totp.generate(time: Date)
+if let totp = TOTP(secret: data) {
+	let otpString = totp.generate(time: Date)
+}
 ```
 
 
-Or from Unix time (i.e. seconds elapsed since 00:00 1 Jan 1970):
+Or from Unix time (i.e. seconds elapsed since 01 Jan 1970 00:00 UTC):
 ```swift
-totp.generate(secondsPast1970: 1234567890)
+if let totp = TOTP(secret: data) {
+	let otpString = totp.generate(secondsPast1970: 1234567890)
+}
 ```
-Note: only `Int` values are accepted by this function. 
+Note: only `Int` values are accepted by this function, and must be positive.
 
-### HOTP (HMAC-Based One Time Password)
+### HOTP (HMAC-Based One Time Password (counter-based))
 
 In addition to TOTP, SwiftOTP also supports the generation of counter-based HOTP passwords.
 #### Creation of an HOTP Object:
 ```swift
-let hotp = HOTP(secret: data)!
+let hotp = HOTP(secret: data)
 ```
 A HOTP Object can be created with the default settings (6 digits, using HMAC-SHA-1) as shown above, or the individual parameters can be set as shown below:
 ```swift
-let hotp = HOTP(secret: data, digits: 6, algorithm: .sha1)!
+let hotp = HOTP(secret: data, digits: 6, algorithm: .sha1)
 ```
 #### Generating HOTP Passwords
 After creating a TOTP object, a password can be generated for a counter value (`UInt64`) by using the `generate()` function, for example (where `hotp` is a `HOTP` object):
 ```swift
-hotp.generate(counter: 42)
+if let hotp = HOTP(secret: data) {
+	let otpString = hotp.generate(counter: 42)
+}
 ```
 
 ### Base32
-Most secret keys for generating one time passwords use Base32 encoding. As such, SwiftOTP includes a [Base32 Helper](https://github.com/norio-nomura/Base32) to decode a Base32 string into `Data`.
+Most secret keys for generating one time passwords use Base32 encoding. As such, SwiftOTP includes a [Base32 Helper](https://github.com/norio-nomura/Base32) to decode a Base32 string to `Data`.
 
 For example:
 ```swift
@@ -71,17 +76,19 @@ base32DecodeToData("ABCDEFGHIJKLMNOP")!
 
 Or in use:
 ```swift
-let data = base32DecodeToData("ABCDEFGHIJKLMNOP")!
-let hotp = HOTP(secret: data)!
-print(hotp.generate(42))
+guard let data = base32DecodeToData("ABCDEFGHIJKLMNOP") else { return }
+
+if let hotp = HOTP(secret: data) {
+	print(hotp.generate(42))
+}
 ```
 
 ### Supported parameters
 #### Hash Functions
-SwiftOTP supports HMAC with SHA1 as specified in [RFC 4226](https://tools.ietf.org/html/rfc4226), as well as SHA256 and SHA512 added in [RFC 6238](https://tools.ietf.org/html/rfc6238). MD5 is **not** supported due to its inability to produce reliable one time passwords.
+SwiftOTP supports HMAC with SHA1 as specified in [RFC 4226](https://tools.ietf.org/html/rfc4226), as well as SHA256 and SHA512 added in [RFC 6238](https://tools.ietf.org/html/rfc6238). MD5 is **not** supported, due to its insufficient hash length.
 
 #### Digit Length
-Both the `TOTP` and `HOTP` objects only accept a digit length value between 6 and 8, as specified in [RFC 4226](https://tools.ietf.org/html/rfc4226). Both objects will return `nil` if an invalid digit length value is provided.
+Both the `TOTP` and `HOTP` objects only accept a digit length value between 6 and 8, as specified in [RFC 4226](https://tools.ietf.org/html/rfc4226). Both objects will be `nil` if an invalid digit length value is provided.
 
 ## Older Swift Versions
 Use the corresponding branch for using an older Swift version (4.0 and greater). For example:
@@ -90,7 +97,6 @@ pod 'SwiftOTP', :git => 'https://github.com/lachlanbell/SwiftOTP.git', :branch =
 ```
 
 ## License
-
 SwiftOTP is available under the MIT license. See the LICENSE file for more info.
 
 ### Acknowledgements
@@ -98,7 +104,5 @@ SwiftOTP depends on the following open-source projects:
 
 * [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift) by Marcin Krzyżanowski ([License](https://github.com/krzyzanowskim/CryptoSwift/tree/master/LICENSE))
 * [Base32](https://github.com/norio-nomura/Base32) by Norio Nomura ([License](https://github.com/norio-nomura/Base32/blob/master/LICENSE))
-
-Please include the respective licenses in addition to the SwiftOTP license in your project.
 
 Some parts of the password generator code were adapted from the [old Google Authenticator source](https://github.com/google/google-authenticator).
