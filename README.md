@@ -34,7 +34,7 @@ For example, to get a password for the current time using a `TOTP` object named 
 
 ```swift
 if let totp = TOTP(secret: data) {
-	let otpString = totp.generate(time: Date)
+    let otpString = totp.generate(time: Date)
 }
 ```
 
@@ -42,7 +42,7 @@ if let totp = TOTP(secret: data) {
 Or from Unix time (i.e. seconds elapsed since 01 Jan 1970 00:00 UTC):
 ```swift
 if let totp = TOTP(secret: data) {
-	let otpString = totp.generate(secondsPast1970: 1234567890)
+    let otpString = totp.generate(secondsPast1970: 1234567890)
 }
 ```
 Note: only `Int` values are accepted by this function, and must be positive.
@@ -62,7 +62,7 @@ let hotp = HOTP(secret: data, digits: 6, algorithm: .sha1)
 After creating a TOTP object, a password can be generated for a counter value (`UInt64`) by using the `generate()` function, for example (where `hotp` is a `HOTP` object):
 ```swift
 if let hotp = HOTP(secret: data) {
-	let otpString = hotp.generate(counter: 42)
+    let otpString = hotp.generate(counter: 42)
 }
 ```
 
@@ -79,7 +79,7 @@ Or in use:
 guard let data = base32DecodeToData("ABCDEFGHIJKLMNOP") else { return }
 
 if let hotp = HOTP(secret: data) {
-	print(hotp.generate(42))
+    print(hotp.generate(42))
 }
 ```
 
