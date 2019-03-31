@@ -2,12 +2,12 @@ root = true
 
 [*]
 indent_style = tab 
-indent_size = 2
+indent_size = 4
 
 [*.md]
 indent_style = tab
-indent_size = 2
+indent_size = 4
 
 [*.swift]
 indent_style = tab
-indent_size = 2
+indent_size = 4
