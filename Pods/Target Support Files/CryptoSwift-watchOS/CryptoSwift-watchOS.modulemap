@@ -1,0 +1,9 @@
+module CryptoSwift {
+  umbrella header "CryptoSwift-watchOS-umbrella.h"
+  exclude header "CryptoSwift-iOS-umbrella.h"
+  exclude header "CryptoSwift-macOS-umbrella.h"
+  exclude header "CryptoSwift-tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+module Pods_SwiftOTP_TV {
+  umbrella header "Pods-SwiftOTP TV-umbrella.h"
+
+  export *
+  module * { export * }
+}

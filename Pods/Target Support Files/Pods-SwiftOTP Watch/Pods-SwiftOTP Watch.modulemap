@@ -1,0 +1,6 @@
+module Pods_SwiftOTP_Watch {
+  umbrella header "Pods-SwiftOTP Watch-umbrella.h"
+
+  export *
+  module * { export * }
+}

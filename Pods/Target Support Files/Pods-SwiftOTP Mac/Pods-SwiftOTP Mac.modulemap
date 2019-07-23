@@ -1,0 +1,6 @@
+module Pods_SwiftOTP_Mac {
+  umbrella header "Pods-SwiftOTP Mac-umbrella.h"
+
+  export *
+  module * { export * }
+}

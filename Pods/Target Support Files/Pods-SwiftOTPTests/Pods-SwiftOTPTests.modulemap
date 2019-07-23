@@ -1,0 +1,6 @@
+module Pods_SwiftOTPTests {
+  umbrella header "Pods-SwiftOTPTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
