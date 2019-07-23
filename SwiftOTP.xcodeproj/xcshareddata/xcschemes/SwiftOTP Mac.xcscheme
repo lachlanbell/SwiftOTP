@@ -7,30 +7,16 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "YES"
+            buildForTesting = "NO"
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0E5B38842008B07900A419CA"
-               BuildableName = "SwiftOTP.framework"
-               BlueprintName = "SwiftOTP"
-               ReferencedContainer = "container:SwiftOTP.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0E5B388D2008B07900A419CA"
-               BuildableName = "SwiftOTPTests.xctest"
-               BlueprintName = "SwiftOTPTests"
+               BlueprintIdentifier = "0E45380D215774B600B417E4"
+               BuildableName = "SwiftOTP.framework"
+               BlueprintName = "SwiftOTP Mac"
                ReferencedContainer = "container:SwiftOTP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0E5B388D2008B07900A419CA"
-               BuildableName = "SwiftOTPTests.xctest"
-               BlueprintName = "SwiftOTPTests"
-               ReferencedContainer = "container:SwiftOTP.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0E5B38842008B07900A419CA"
-            BuildableName = "SwiftOTP.framework"
-            BlueprintName = "SwiftOTP"
-            ReferencedContainer = "container:SwiftOTP.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -78,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0E5B38842008B07900A419CA"
+            BlueprintIdentifier = "0E45380D215774B600B417E4"
             BuildableName = "SwiftOTP.framework"
-            BlueprintName = "SwiftOTP"
+            BlueprintName = "SwiftOTP Mac"
             ReferencedContainer = "container:SwiftOTP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -96,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0E5B38842008B07900A419CA"
+            BlueprintIdentifier = "0E45380D215774B600B417E4"
             BuildableName = "SwiftOTP.framework"
-            BlueprintName = "SwiftOTP"
+            BlueprintName = "SwiftOTP Mac"
             ReferencedContainer = "container:SwiftOTP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
