@@ -62,7 +62,7 @@ internal class Generator {
 		let truncatedHMAC = Array(hmac[offset...offset + 3])
 		
 		// Convert byte array of the truncated hash to data
-		let data =  Data(bytes: truncatedHMAC)
+		let data =  Data(truncatedHMAC)
 		
 		// Convert data to UInt32
 		var number = UInt32(strtoul(data.toHexString(), nil, 16))

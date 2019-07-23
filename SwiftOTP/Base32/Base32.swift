@@ -305,7 +305,7 @@ private func base32decode(_ string: String, _ table: [UInt8]) -> [UInt8]? {
 	
 	// validate string
 	let leastPaddingLength = getLeastPaddingLength(string)
-	if let index = string.unicodeScalars.index(where: {$0.value > 0xff || table[Int($0.value)] > 31}) {
+	if let index = string.unicodeScalars.firstIndex(where: {$0.value > 0xff || table[Int($0.value)] > 31}) {
 		// index points padding "=" or invalid character that table does not contain.
 		let pos = string.unicodeScalars.distance(from: string.unicodeScalars.startIndex, to: index)
 		// if pos points padding "=", it's valid.
