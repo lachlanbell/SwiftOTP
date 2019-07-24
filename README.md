@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/lachlanbell/SwiftOTP.svg?branch=master)](https://travis-ci.org/lachlanbell/SwiftOTP)
 [![Version](https://img.shields.io/cocoapods/v/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
 ![Swift Version](https://img.shields.io/badge/Swift-4.1-orange.svg)
@@ -9,12 +10,21 @@
 SwiftOTP is a Swift library for generating One Time Passwords (OTP) commonly used for two factor authentication. SwiftOTP supports both HMAC-Based One Time Passwords (HOTP) and Time Based One Time Passwords (TOTP) defined in [RFC 4226](https://tools.ietf.org/html/rfc4226) and [RFC 6238](https://tools.ietf.org/html/rfc6238) respectively.
 ## Installation
 
+### Cocoapods
 SwiftOTP is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'SwiftOTP'
 ```
 Then run `pod install` in the project directory to install.
+
+### Carthage
+SwiftOTP is available through [Carthage](https://github.com/Carthage/Carthage). To install it, simply add the following line to your Cartfile:
+
+```
+github "lachlanbell/SwiftOTP"
+```
+Then run `cartfile update` in the project directory and add the resulting frameworks to your project.
 
 ## Usage
 ### TOTP (Time-Based One Time Password)
