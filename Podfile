@@ -1,26 +1,27 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-
+platform :ios, '9.0'
 use_frameworks!
 
 target 'SwiftOTP' do
-  pod 'CryptoSwift', '>= 0.10.0'
+  pod 'CryptoSwift', '>= 1.0.0'
 
 end
 
 target 'SwiftOTP Mac' do
-  pod 'CryptoSwift', '>= 0.10.0'
+  platform :osx, '10.11'
+  pod 'CryptoSwift', '>= 1.0.0'
 end
 
 target 'SwiftOTP TV' do
-  pod 'CryptoSwift', '>= 0.10.0'
+  platform :tvos, '9.0'
+  pod 'CryptoSwift', '>= 1.0.0'
 end
 
 target 'SwiftOTP Watch' do
-  pod 'CryptoSwift', '>= 0.10.0'
+  platform :watchos, '4.0'
+  pod 'CryptoSwift', '>= 1.0.0'
 end
 
 target 'SwiftOTPTests' do
     inherit! :search_paths
-    pod 'CryptoSwift', '>= 0.10.0'
+    pod 'CryptoSwift', '>= 1.0.0'
   end

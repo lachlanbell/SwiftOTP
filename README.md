@@ -4,17 +4,26 @@
 [![Version](https://img.shields.io/cocoapods/v/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
 [![License](https://img.shields.io/cocoapods/l/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
-![Swift Version](https://img.shields.io/badge/Swift-4.1-orange.svg)
+![Swift Version](https://img.shields.io/badge/Swift-5.0-orange.svg)
 
 SwiftOTP is a Swift library for generating One Time Passwords (OTP) commonly used for two factor authentication. SwiftOTP supports both HMAC-Based One Time Passwords (HOTP) and Time Based One Time Passwords (TOTP) defined in [RFC 4226](https://tools.ietf.org/html/rfc4226) and [RFC 6238](https://tools.ietf.org/html/rfc6238) respectively.
 ## Installation
-
+### CocoaPods
 SwiftOTP is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'SwiftOTP'
 ```
 Then run `pod install` in the project directory to install.
+
+### Swift Package Manager
+You can use [Swift Package Manager](https://swift.org/package-manager/) and specify dependency in `Package.swift` by adding this:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/lachlanbell/SwiftOTP.git", .upToNextMinor(from: "2.0.0"))
+]
+```
 
 ## Usage
 ### TOTP (Time-Based One Time Password)
