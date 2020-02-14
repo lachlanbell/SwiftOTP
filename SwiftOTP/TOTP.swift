@@ -69,7 +69,12 @@ public struct TOTP {
 	public func generate(secondsPast1970: Int) -> String? {
 		guard validateTime(time: secondsPast1970) else { return nil }
 		let counterValue = Int(floor(Double(secondsPast1970) / Double(timeInterval)))
-		return Generator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: UInt64(counterValue), digits: digits)
+		if #available(iOS 13.0, *) {
+			return NativeGenerator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: UInt64(counterValue), digits: digits)
+		}
+		else {
+			return Generator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: UInt64(counterValue), digits: digits)
+		}
 	}
 	
 	/// Check to see if digits value provided is in the range 6...8 (specified in RFC 4226)

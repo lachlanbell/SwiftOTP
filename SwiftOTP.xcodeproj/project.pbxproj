@@ -42,6 +42,8 @@
 		0E5B38DD200B1D3700A419CA /* HOTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B38DC200B1D3700A419CA /* HOTPTests.swift */; };
 		0E5B38DF200B1D4600A419CA /* TOTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B38DE200B1D4600A419CA /* TOTPTests.swift */; };
 		748ABF0F3818842848B9AA16 /* Pods_SwiftOTP_Watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEF7A3CA27124B06D01B5AE /* Pods_SwiftOTP_Watch.framework */; };
+		7B82A67023F6DD0700DA2490 /* NativeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B82A66F23F6DD0700DA2490 /* NativeGenerator.swift */; };
+		7B82A67223F6E30F00DA2490 /* NativeGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B82A67123F6E30F00DA2490 /* NativeGeneratorTests.swift */; };
 		90CE909444803ED26BD6E356 /* Pods_SwiftOTP_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EF610F582E83CB3609A180 /* Pods_SwiftOTP_Mac.framework */; };
 		A931B4DEF12EFBD7A7BFD07D /* Pods_SwiftOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E241A5B4DC9541A5B4F639F /* Pods_SwiftOTP.framework */; };
 		BA3591CCA1AC1696C184A856 /* Pods_SwiftOTP_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DB0199D88A9D02B7A32653 /* Pods_SwiftOTP_TV.framework */; };
@@ -91,6 +93,8 @@
 		3A64D432841DBC9BAE9195BB /* Pods-SwiftOTP Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP Mac/Pods-SwiftOTP Mac.release.xcconfig"; sourceTree = "<group>"; };
 		4E241A5B4DC9541A5B4F639F /* Pods_SwiftOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7B4E9A5EC9125FC06CA9EF /* Pods-SwiftOTPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTPTests/Pods-SwiftOTPTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B82A66F23F6DD0700DA2490 /* NativeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeGenerator.swift; sourceTree = "<group>"; };
+		7B82A67123F6E30F00DA2490 /* NativeGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeGeneratorTests.swift; sourceTree = "<group>"; };
 		9CA72805763F06BF93431E28 /* Pods-SwiftOTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP.debug.xcconfig"; sourceTree = "<group>"; };
 		A5EF610F582E83CB3609A180 /* Pods_SwiftOTP_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTP_Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60412F7533B5AAE032277FC /* Pods-SwiftOTP Watch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP Watch.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP Watch/Pods-SwiftOTP Watch.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				0E5B38A02008BCB200A419CA /* OTPAlgorithm.swift */,
 				0E5B38DA200B1B4D00A419CA /* HOTP.swift */,
 				0E5B38A12008BCB200A419CA /* TOTP.swift */,
+				7B82A66F23F6DD0700DA2490 /* NativeGenerator.swift */,
 				0E5B389F2008BCB200A419CA /* Generator.swift */,
 				0E303A7621A3A742002FB8E0 /* UInt64+Data.swift */,
 				0E5B38882008B07900A419CA /* SwiftOTP.h */,
@@ -217,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				0E5B38A520097BA000A419CA /* GeneratorTests.swift */,
+				7B82A67123F6E30F00DA2490 /* NativeGeneratorTests.swift */,
 				0E5B38DC200B1D3700A419CA /* HOTPTests.swift */,
 				0E5B38DE200B1D4600A419CA /* TOTPTests.swift */,
 				0E5B38952008B07900A419CA /* Info.plist */,
@@ -385,7 +391,7 @@
 				0E5B388A2008B07900A419CA /* Sources */,
 				0E5B388B2008B07900A419CA /* Frameworks */,
 				0E5B388C2008B07900A419CA /* Resources */,
-				D5A67B549A2A675D5D331C9E /* [CP] Embed Pods Frameworks */,
+				5B69A98E7583740BB7A82638 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -530,6 +536,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5B69A98E7583740BB7A82638 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftOTPTests/Pods-SwiftOTPTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift-iOS/CryptoSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftOTPTests/Pods-SwiftOTPTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A93215D914D4666B02BA65CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -550,24 +574,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D5A67B549A2A675D5D331C9E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftOTPTests/Pods-SwiftOTPTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift-iOS/CryptoSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftOTPTests/Pods-SwiftOTPTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E11B1EA3DD44B7BB9B3C11EB /* [CP] Check Pods Manifest.lock */ = {
@@ -655,6 +661,7 @@
 				0E5B38D8200ACDBC00A419CA /* StringExtension.swift in Sources */,
 				0E5B38A22008BCB200A419CA /* Generator.swift in Sources */,
 				0E303A7721A3A742002FB8E0 /* UInt64+Data.swift in Sources */,
+				7B82A67023F6DD0700DA2490 /* NativeGenerator.swift in Sources */,
 				0E5B38A42008BCB200A419CA /* TOTP.swift in Sources */,
 				0E5B38D9200ACDBC00A419CA /* Base32.swift in Sources */,
 				0E5B38DB200B1B4D00A419CA /* HOTP.swift in Sources */,
@@ -669,6 +676,7 @@
 				0E5B38DD200B1D3700A419CA /* HOTPTests.swift in Sources */,
 				0E5B38DF200B1D4600A419CA /* TOTPTests.swift in Sources */,
 				0E5B38A620097BA000A419CA /* GeneratorTests.swift in Sources */,
+				7B82A67223F6E30F00DA2490 /* NativeGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -984,12 +992,12 @@
 			baseConfigurationReference = 9CA72805763F06BF93431E28 /* Pods-SwiftOTP.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QWEFPPRV9D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1012,11 +1020,11 @@
 			baseConfigurationReference = 1F4BAF68BFD4A274DB50BF2D /* Pods-SwiftOTP.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QWEFPPRV9D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1039,7 +1047,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D8RNQLFMPC;
+				DEVELOPMENT_TEAM = QWEFPPRV9D;
 				INFOPLIST_FILE = SwiftOTPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lbell.SwiftOTPTests;
@@ -1055,7 +1063,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D8RNQLFMPC;
+				DEVELOPMENT_TEAM = QWEFPPRV9D;
 				INFOPLIST_FILE = SwiftOTPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lbell.SwiftOTPTests;
