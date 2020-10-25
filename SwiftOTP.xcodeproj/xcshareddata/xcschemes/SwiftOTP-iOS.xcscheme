@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5A172DE0DFE2A61BD264293286E1B7D4"
-               BuildableName = "Pods_SwiftOTP.framework"
-               BlueprintName = "Pods-SwiftOTP"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "0E5B38842008B07900A419CA"
                BuildableName = "SwiftOTP.framework"
-               BlueprintName = "SwiftOTP"
+               BlueprintName = "SwiftOTP-iOS"
                ReferencedContainer = "container:SwiftOTP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -60,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0E5B38842008B07900A419CA"
             BuildableName = "SwiftOTP.framework"
-            BlueprintName = "SwiftOTP"
+            BlueprintName = "SwiftOTP-iOS"
             ReferencedContainer = "container:SwiftOTP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -92,7 +78,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0E5B38842008B07900A419CA"
             BuildableName = "SwiftOTP.framework"
-            BlueprintName = "SwiftOTP"
+            BlueprintName = "SwiftOTP-iOS"
             ReferencedContainer = "container:SwiftOTP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -108,7 +94,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0E5B38842008B07900A419CA"
             BuildableName = "SwiftOTP.framework"
-            BlueprintName = "SwiftOTP"
+            BlueprintName = "SwiftOTP-iOS"
             ReferencedContainer = "container:SwiftOTP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

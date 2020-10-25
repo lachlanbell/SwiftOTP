@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D92DB10313016CA345B1940 /* Pods_SwiftOTPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A9F5D178BB03E9136754F /* Pods_SwiftOTPTests.framework */; };
 		0E303A7721A3A742002FB8E0 /* UInt64+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E303A7621A3A742002FB8E0 /* UInt64+Data.swift */; };
 		0E453812215774B600B417E4 /* SwiftOTP_Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E453810215774B600B417E4 /* SwiftOTP_Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E4538192157766000B417E4 /* OTPAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B38A02008BCB200A419CA /* OTPAlgorithm.swift */; };
@@ -41,24 +40,28 @@
 		0E5B38DB200B1B4D00A419CA /* HOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B38DA200B1B4D00A419CA /* HOTP.swift */; };
 		0E5B38DD200B1D3700A419CA /* HOTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B38DC200B1D3700A419CA /* HOTPTests.swift */; };
 		0E5B38DF200B1D4600A419CA /* TOTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B38DE200B1D4600A419CA /* TOTPTests.swift */; };
-		748ABF0F3818842848B9AA16 /* Pods_SwiftOTP_Watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEF7A3CA27124B06D01B5AE /* Pods_SwiftOTP_Watch.framework */; };
-		90CE909444803ED26BD6E356 /* Pods_SwiftOTP_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EF610F582E83CB3609A180 /* Pods_SwiftOTP_Mac.framework */; };
-		A931B4DEF12EFBD7A7BFD07D /* Pods_SwiftOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E241A5B4DC9541A5B4F639F /* Pods_SwiftOTP.framework */; };
-		BA3591CCA1AC1696C184A856 /* Pods_SwiftOTP_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DB0199D88A9D02B7A32653 /* Pods_SwiftOTP_TV.framework */; };
+		FC338DB125460B7300F5871E /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC338DB025460B7300F5871E /* CryptoSwift.framework */; };
+		FC338DB325460DD000F5871E /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC338DB225460DD000F5871E /* CryptoSwift.framework */; };
+		FC338DB525460DFB00F5871E /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC338DB425460DFB00F5871E /* CryptoSwift.framework */; };
+		FC338DB625460E4300F5871E /* UInt64+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E303A7621A3A742002FB8E0 /* UInt64+Data.swift */; };
+		FC338DB725460E4400F5871E /* UInt64+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E303A7621A3A742002FB8E0 /* UInt64+Data.swift */; };
+		FC338DB825460E4500F5871E /* UInt64+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E303A7621A3A742002FB8E0 /* UInt64+Data.swift */; };
+		FC338DBA25460E6700F5871E /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC338DB925460E6700F5871E /* CryptoSwift.framework */; };
+		FC338DBB25460EDB00F5871E /* CryptoSwift.framework in Resources */ = {isa = PBXBuildFile; fileRef = FC338DB025460B7300F5871E /* CryptoSwift.framework */; };
+		FC338DBC25460F3500F5871E /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC338DB025460B7300F5871E /* CryptoSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0E5B38902008B07900A419CA /* PBXContainerItemProxy */ = {
+		FC338DBD2546114500F5871E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0E5B387C2008B07900A419CA /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0E5B38842008B07900A419CA;
-			remoteInfo = SwiftOTP;
+			remoteInfo = "SwiftOTP-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06B6AE79191723C139875C67 /* Pods-SwiftOTP Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP Mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP Mac/Pods-SwiftOTP Mac.debug.xcconfig"; sourceTree = "<group>"; };
 		0E303A7621A3A742002FB8E0 /* UInt64+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt64+Data.swift"; sourceTree = "<group>"; };
 		0E45380E215774B600B417E4 /* SwiftOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E453810215774B600B417E4 /* SwiftOTP_Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftOTP_Mac.h; sourceTree = "<group>"; };
@@ -83,20 +86,10 @@
 		0E5B38DA200B1B4D00A419CA /* HOTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTP.swift; sourceTree = "<group>"; };
 		0E5B38DC200B1D3700A419CA /* HOTPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTPTests.swift; sourceTree = "<group>"; };
 		0E5B38DE200B1D4600A419CA /* TOTPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPTests.swift; sourceTree = "<group>"; };
-		1F4BAF68BFD4A274DB50BF2D /* Pods-SwiftOTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP.release.xcconfig"; sourceTree = "<group>"; };
-		21FB0F51DC02039906CB5ACF /* Pods-SwiftOTP TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP TV/Pods-SwiftOTP TV.debug.xcconfig"; sourceTree = "<group>"; };
-		27FC0FDCC158142A6DE70DB6 /* Pods-SwiftOTP TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP TV/Pods-SwiftOTP TV.release.xcconfig"; sourceTree = "<group>"; };
-		293A9F5D178BB03E9136754F /* Pods_SwiftOTPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31DB0199D88A9D02B7A32653 /* Pods_SwiftOTP_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTP_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A64D432841DBC9BAE9195BB /* Pods-SwiftOTP Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP Mac/Pods-SwiftOTP Mac.release.xcconfig"; sourceTree = "<group>"; };
-		4E241A5B4DC9541A5B4F639F /* Pods_SwiftOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F7B4E9A5EC9125FC06CA9EF /* Pods-SwiftOTPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTPTests/Pods-SwiftOTPTests.release.xcconfig"; sourceTree = "<group>"; };
-		9CA72805763F06BF93431E28 /* Pods-SwiftOTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP.debug.xcconfig"; sourceTree = "<group>"; };
-		A5EF610F582E83CB3609A180 /* Pods_SwiftOTP_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTP_Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B60412F7533B5AAE032277FC /* Pods-SwiftOTP Watch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP Watch.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP Watch/Pods-SwiftOTP Watch.release.xcconfig"; sourceTree = "<group>"; };
-		BCEF7A3CA27124B06D01B5AE /* Pods_SwiftOTP_Watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTP_Watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D188C52CE9E459566B7A53C4 /* Pods-SwiftOTPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTPTests/Pods-SwiftOTPTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EDA3F0E6BF93D59DE89022D8 /* Pods-SwiftOTP Watch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP Watch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP Watch/Pods-SwiftOTP Watch.debug.xcconfig"; sourceTree = "<group>"; };
+		FC338DB025460B7300F5871E /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		FC338DB225460DD000F5871E /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
+		FC338DB425460DFB00F5871E /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/watchOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		FC338DB925460E6700F5871E /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/tvOS/CryptoSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90CE909444803ED26BD6E356 /* Pods_SwiftOTP_Mac.framework in Frameworks */,
+				FC338DB325460DD000F5871E /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				748ABF0F3818842848B9AA16 /* Pods_SwiftOTP_Watch.framework in Frameworks */,
+				FC338DB525460DFB00F5871E /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA3591CCA1AC1696C184A856 /* Pods_SwiftOTP_TV.framework in Frameworks */,
+				FC338DBA25460E6700F5871E /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A931B4DEF12EFBD7A7BFD07D /* Pods_SwiftOTP.framework in Frameworks */,
+				FC338DB125460B7300F5871E /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC338DBC25460F3500F5871E /* CryptoSwift.framework in Frameworks */,
 				0E5B388F2008B07900A419CA /* SwiftOTP.framework in Frameworks */,
-				0D92DB10313016CA345B1940 /* Pods_SwiftOTPTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,11 +169,10 @@
 			children = (
 				0E5B38872008B07900A419CA /* SwiftOTP */,
 				0E5B38922008B07900A419CA /* SwiftOTPTests */,
-				BE8FE4BAD7D4C80A28898C3C /* Pods */,
 				0E45380F215774B600B417E4 /* SwiftOTP Mac */,
 				0E4538252157767B00B417E4 /* SwiftOTP Watch */,
 				0E4538322157770F00B417E4 /* SwiftOTP TV */,
-				CC168C46C1BC9FBC3DE2B268 /* Frameworks */,
+				FC338DAF25460B7300F5871E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 1;
@@ -234,31 +226,13 @@
 			path = Base32;
 			sourceTree = "<group>";
 		};
-		BE8FE4BAD7D4C80A28898C3C /* Pods */ = {
+		FC338DAF25460B7300F5871E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9CA72805763F06BF93431E28 /* Pods-SwiftOTP.debug.xcconfig */,
-				1F4BAF68BFD4A274DB50BF2D /* Pods-SwiftOTP.release.xcconfig */,
-				D188C52CE9E459566B7A53C4 /* Pods-SwiftOTPTests.debug.xcconfig */,
-				5F7B4E9A5EC9125FC06CA9EF /* Pods-SwiftOTPTests.release.xcconfig */,
-				06B6AE79191723C139875C67 /* Pods-SwiftOTP Mac.debug.xcconfig */,
-				3A64D432841DBC9BAE9195BB /* Pods-SwiftOTP Mac.release.xcconfig */,
-				21FB0F51DC02039906CB5ACF /* Pods-SwiftOTP TV.debug.xcconfig */,
-				27FC0FDCC158142A6DE70DB6 /* Pods-SwiftOTP TV.release.xcconfig */,
-				EDA3F0E6BF93D59DE89022D8 /* Pods-SwiftOTP Watch.debug.xcconfig */,
-				B60412F7533B5AAE032277FC /* Pods-SwiftOTP Watch.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		CC168C46C1BC9FBC3DE2B268 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4E241A5B4DC9541A5B4F639F /* Pods_SwiftOTP.framework */,
-				293A9F5D178BB03E9136754F /* Pods_SwiftOTPTests.framework */,
-				A5EF610F582E83CB3609A180 /* Pods_SwiftOTP_Mac.framework */,
-				31DB0199D88A9D02B7A32653 /* Pods_SwiftOTP_TV.framework */,
-				BCEF7A3CA27124B06D01B5AE /* Pods_SwiftOTP_Watch.framework */,
+				FC338DB925460E6700F5871E /* CryptoSwift.framework */,
+				FC338DB425460DFB00F5871E /* CryptoSwift.framework */,
+				FC338DB225460DD000F5871E /* CryptoSwift.framework */,
+				FC338DB025460B7300F5871E /* CryptoSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -301,68 +275,64 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0E45380D215774B600B417E4 /* SwiftOTP Mac */ = {
+		0E45380D215774B600B417E4 /* SwiftOTP-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E453815215774B600B417E4 /* Build configuration list for PBXNativeTarget "SwiftOTP Mac" */;
+			buildConfigurationList = 0E453815215774B600B417E4 /* Build configuration list for PBXNativeTarget "SwiftOTP-macOS" */;
 			buildPhases = (
-				FEC92955EF01FEF3D7F648E0 /* [CP] Check Pods Manifest.lock */,
-				0E453809215774B600B417E4 /* Headers */,
 				0E45380A215774B600B417E4 /* Sources */,
 				0E45380B215774B600B417E4 /* Frameworks */,
+				0E453809215774B600B417E4 /* Headers */,
 				0E45380C215774B600B417E4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "SwiftOTP Mac";
+			name = "SwiftOTP-macOS";
 			productName = "SwiftOTP Mac";
 			productReference = 0E45380E215774B600B417E4 /* SwiftOTP.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0E4538232157767B00B417E4 /* SwiftOTP Watch */ = {
+		0E4538232157767B00B417E4 /* SwiftOTP-watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E4538292157767B00B417E4 /* Build configuration list for PBXNativeTarget "SwiftOTP Watch" */;
+			buildConfigurationList = 0E4538292157767B00B417E4 /* Build configuration list for PBXNativeTarget "SwiftOTP-watchOS" */;
 			buildPhases = (
-				1E3E158FD03E69EC52A85E5A /* [CP] Check Pods Manifest.lock */,
-				0E45381F2157767B00B417E4 /* Headers */,
 				0E4538202157767B00B417E4 /* Sources */,
 				0E4538212157767B00B417E4 /* Frameworks */,
+				0E45381F2157767B00B417E4 /* Headers */,
 				0E4538222157767B00B417E4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "SwiftOTP Watch";
+			name = "SwiftOTP-watchOS";
 			productName = "SwiftOTP Watch";
 			productReference = 0E4538242157767B00B417E4 /* SwiftOTP.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0E4538302157770F00B417E4 /* SwiftOTP TV */ = {
+		0E4538302157770F00B417E4 /* SwiftOTP-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E4538362157770F00B417E4 /* Build configuration list for PBXNativeTarget "SwiftOTP TV" */;
+			buildConfigurationList = 0E4538362157770F00B417E4 /* Build configuration list for PBXNativeTarget "SwiftOTP-tvOS" */;
 			buildPhases = (
-				A93215D914D4666B02BA65CA /* [CP] Check Pods Manifest.lock */,
-				0E45382C2157770F00B417E4 /* Headers */,
 				0E45382D2157770F00B417E4 /* Sources */,
 				0E45382E2157770F00B417E4 /* Frameworks */,
+				0E45382C2157770F00B417E4 /* Headers */,
 				0E45382F2157770F00B417E4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "SwiftOTP TV";
+			name = "SwiftOTP-tvOS";
 			productName = "SwiftOTP TV";
 			productReference = 0E4538312157770F00B417E4 /* SwiftOTP.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0E5B38842008B07900A419CA /* SwiftOTP */ = {
+		0E5B38842008B07900A419CA /* SwiftOTP-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E5B38992008B07900A419CA /* Build configuration list for PBXNativeTarget "SwiftOTP" */;
+			buildConfigurationList = 0E5B38992008B07900A419CA /* Build configuration list for PBXNativeTarget "SwiftOTP-iOS" */;
 			buildPhases = (
-				0A07EC2C938BF85422B96BC2 /* [CP] Check Pods Manifest.lock */,
 				0E5B38802008B07900A419CA /* Sources */,
 				0E5B38812008B07900A419CA /* Frameworks */,
 				0E5B38822008B07900A419CA /* Headers */,
@@ -372,7 +342,7 @@
 			);
 			dependencies = (
 			);
-			name = SwiftOTP;
+			name = "SwiftOTP-iOS";
 			productName = SwiftOTP;
 			productReference = 0E5B38852008B07900A419CA /* SwiftOTP.framework */;
 			productType = "com.apple.product-type.framework";
@@ -381,16 +351,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E5B389C2008B07900A419CA /* Build configuration list for PBXNativeTarget "SwiftOTPTests" */;
 			buildPhases = (
-				E11B1EA3DD44B7BB9B3C11EB /* [CP] Check Pods Manifest.lock */,
 				0E5B388A2008B07900A419CA /* Sources */,
 				0E5B388B2008B07900A419CA /* Frameworks */,
 				0E5B388C2008B07900A419CA /* Resources */,
-				D5A67B549A2A675D5D331C9E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0E5B38912008B07900A419CA /* PBXTargetDependency */,
+				FC338DBE2546114500F5871E /* PBXTargetDependency */,
 			);
 			name = SwiftOTPTests;
 			productName = SwiftOTPTests;
@@ -442,11 +410,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0E5B38842008B07900A419CA /* SwiftOTP */,
+				0E5B38842008B07900A419CA /* SwiftOTP-iOS */,
 				0E5B388D2008B07900A419CA /* SwiftOTPTests */,
-				0E45380D215774B600B417E4 /* SwiftOTP Mac */,
-				0E4538232157767B00B417E4 /* SwiftOTP Watch */,
-				0E4538302157770F00B417E4 /* SwiftOTP TV */,
+				0E45380D215774B600B417E4 /* SwiftOTP-macOS */,
+				0E4538232157767B00B417E4 /* SwiftOTP-watchOS */,
+				0E4538302157770F00B417E4 /* SwiftOTP-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -484,129 +452,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC338DBB25460EDB00F5871E /* CryptoSwift.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0A07EC2C938BF85422B96BC2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftOTP-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1E3E158FD03E69EC52A85E5A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftOTP Watch-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A93215D914D4666B02BA65CA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftOTP TV-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D5A67B549A2A675D5D331C9E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftOTPTests/Pods-SwiftOTPTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift-iOS/CryptoSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftOTPTests/Pods-SwiftOTPTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E11B1EA3DD44B7BB9B3C11EB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftOTPTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FEC92955EF01FEF3D7F648E0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftOTP Mac-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E45380A215774B600B417E4 /* Sources */ = {
@@ -615,6 +465,7 @@
 			files = (
 				0E45381A2157766000B417E4 /* HOTP.swift in Sources */,
 				0E45381C2157766000B417E4 /* Generator.swift in Sources */,
+				FC338DB625460E4300F5871E /* UInt64+Data.swift in Sources */,
 				0E45381E2157766500B417E4 /* StringExtension.swift in Sources */,
 				0E45381B2157766000B417E4 /* TOTP.swift in Sources */,
 				0E45381D2157766500B417E4 /* Base32.swift in Sources */,
@@ -628,6 +479,7 @@
 			files = (
 				0E45383C2157773800B417E4 /* HOTP.swift in Sources */,
 				0E45383B2157773800B417E4 /* OTPAlgorithm.swift in Sources */,
+				FC338DB725460E4400F5871E /* UInt64+Data.swift in Sources */,
 				0E45383A2157773800B417E4 /* StringExtension.swift in Sources */,
 				0E45383E2157773800B417E4 /* Generator.swift in Sources */,
 				0E4538392157773800B417E4 /* Base32.swift in Sources */,
@@ -641,6 +493,7 @@
 			files = (
 				0E4538422157773800B417E4 /* HOTP.swift in Sources */,
 				0E4538412157773800B417E4 /* OTPAlgorithm.swift in Sources */,
+				FC338DB825460E4500F5871E /* UInt64+Data.swift in Sources */,
 				0E4538402157773800B417E4 /* StringExtension.swift in Sources */,
 				0E4538442157773800B417E4 /* Generator.swift in Sources */,
 				0E45383F2157773800B417E4 /* Base32.swift in Sources */,
@@ -675,17 +528,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0E5B38912008B07900A419CA /* PBXTargetDependency */ = {
+		FC338DBE2546114500F5871E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0E5B38842008B07900A419CA /* SwiftOTP */;
-			targetProxy = 0E5B38902008B07900A419CA /* PBXContainerItemProxy */;
+			target = 0E5B38842008B07900A419CA /* SwiftOTP-iOS */;
+			targetProxy = FC338DBD2546114500F5871E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0E453813215774B600B417E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06B6AE79191723C139875C67 /* Pods-SwiftOTP Mac.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -699,6 +551,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "SwiftOTP Mac/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -717,7 +573,6 @@
 		};
 		0E453814215774B600B417E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A64D432841DBC9BAE9195BB /* Pods-SwiftOTP Mac.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -731,6 +586,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "SwiftOTP Mac/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -748,7 +607,6 @@
 		};
 		0E45382A2157767B00B417E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDA3F0E6BF93D59DE89022D8 /* Pods-SwiftOTP Watch.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -761,6 +619,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "SwiftOTP Watch/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -779,7 +641,6 @@
 		};
 		0E45382B2157767B00B417E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B60412F7533B5AAE032277FC /* Pods-SwiftOTP Watch.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -792,6 +653,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "SwiftOTP Watch/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -809,7 +674,6 @@
 		};
 		0E4538372157770F00B417E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21FB0F51DC02039906CB5ACF /* Pods-SwiftOTP TV.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
@@ -821,6 +685,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "SwiftOTP TV/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -839,7 +707,6 @@
 		};
 		0E4538382157770F00B417E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27FC0FDCC158142A6DE70DB6 /* Pods-SwiftOTP TV.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
@@ -851,6 +718,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "SwiftOTP TV/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -985,7 +856,6 @@
 		};
 		0E5B389A2008B07900A419CA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CA72805763F06BF93431E28 /* Pods-SwiftOTP.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -997,13 +867,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftOTP/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 2.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lbell.SwiftOTP;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = SwiftOTP;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1013,7 +887,6 @@
 		};
 		0E5B389B2008B07900A419CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F4BAF68BFD4A274DB50BF2D /* Pods-SwiftOTP.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1024,13 +897,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftOTP/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 2.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lbell.SwiftOTP;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = SwiftOTP;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1039,11 +916,14 @@
 		};
 		0E5B389D2008B07900A419CA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D188C52CE9E459566B7A53C4 /* Pods-SwiftOTPTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D8RNQLFMPC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftOTPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lbell.SwiftOTPTests;
@@ -1055,11 +935,14 @@
 		};
 		0E5B389E2008B07900A419CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F7B4E9A5EC9125FC06CA9EF /* Pods-SwiftOTPTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D8RNQLFMPC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftOTPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lbell.SwiftOTPTests;
@@ -1072,7 +955,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E453815215774B600B417E4 /* Build configuration list for PBXNativeTarget "SwiftOTP Mac" */ = {
+		0E453815215774B600B417E4 /* Build configuration list for PBXNativeTarget "SwiftOTP-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E453813215774B600B417E4 /* Debug */,
@@ -1081,7 +964,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E4538292157767B00B417E4 /* Build configuration list for PBXNativeTarget "SwiftOTP Watch" */ = {
+		0E4538292157767B00B417E4 /* Build configuration list for PBXNativeTarget "SwiftOTP-watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E45382A2157767B00B417E4 /* Debug */,
@@ -1090,7 +973,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E4538362157770F00B417E4 /* Build configuration list for PBXNativeTarget "SwiftOTP TV" */ = {
+		0E4538362157770F00B417E4 /* Build configuration list for PBXNativeTarget "SwiftOTP-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E4538372157770F00B417E4 /* Debug */,
@@ -1108,7 +991,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E5B38992008B07900A419CA /* Build configuration list for PBXNativeTarget "SwiftOTP" */ = {
+		0E5B38992008B07900A419CA /* Build configuration list for PBXNativeTarget "SwiftOTP-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E5B389A2008B07900A419CA /* Debug */,
