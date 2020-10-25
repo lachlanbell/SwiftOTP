@@ -1,14 +1,20 @@
 language: swift
 
 xcode_workspace: SwiftOTP.xcworkspace
-xcode_scheme: SwiftOTP
+xcode_scheme: SwiftOTP-iOS
 osx_image: xcode11
 xcode_sdk: iphonesimulator13.0
 
+cache:
+  directories:
+  - Carthage
+
 before_install:
-  - gem install cocoapods
-  - pod repo update
+  - brew install carthage || true
+  - brew outdated carthage || brew upgrade carthage
   - gem install xcpretty-travis-formatter
+before_script:
+  - carhtage bootstrap --platform iOS --no-use-binaries --cache-builds
 script:
-  - set -o pipefail && xcodebuild -workspace SwiftOTP.xcworkspace -scheme SwiftOTP -sdk iphonesimulator ONLY_ACTIVE_ARCH=no | xcpretty -f `xcpretty-travis-formatter`
-  - set -o pipefail && xcodebuild test -workspace SwiftOTP.xcworkspace -scheme SwiftOTP -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.2' | xcpretty -f `xcpretty-travis-formatter`
+  - set -o pipefail && xcodebuild -workspace SwiftOTP.xcworkspace -scheme 'SwiftOTP-iOS' -sdk iphonesimulator ONLY_ACTIVE_ARCH=no | xcpretty -f `xcpretty-travis-formatter`
+  - set -o pipefail && xcodebuild test -workspace SwiftOTP.xcworkspace -scheme 'SwiftOTP-iOS' -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.2' | xcpretty -f `xcpretty-travis-formatter`
