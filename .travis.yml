@@ -14,7 +14,7 @@ before_install:
   - brew outdated carthage || brew upgrade carthage
   - gem install xcpretty-travis-formatter
 before_script:
-  - carhtage bootstrap --platform iOS --no-use-binaries --cache-builds
+  - carthage bootstrap --platform iOS --no-use-binaries --cache-builds
 script:
   - set -o pipefail && xcodebuild -workspace SwiftOTP.xcworkspace -scheme 'SwiftOTP-iOS' -sdk iphonesimulator ONLY_ACTIVE_ARCH=no | xcpretty -f `xcpretty-travis-formatter`
   - set -o pipefail && xcodebuild test -workspace SwiftOTP.xcworkspace -scheme 'SwiftOTP-iOS' -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.2' | xcpretty -f `xcpretty-travis-formatter`
