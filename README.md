@@ -23,7 +23,7 @@ SwiftOTP is available through [Carthage](https://github.com/Carthage/Carthage). 
 ```
 github "lachlanbell/SwiftOTP"
 ```
-Then run `cartfile update` in the project directory and add the resulting frameworks to your project.
+Then run `carthage update` in the project directory and add the resulting frameworks to your project.
 
 ### Swift Package Manager
 You can use [Swift Package Manager](https://swift.org/package-manager/) and specify dependency in `Package.swift` by adding this:
