@@ -77,7 +77,7 @@ A HOTP Object can be created with the default settings (6 digits, using HMAC-SHA
 let hotp = HOTP(secret: data, digits: 6, algorithm: .sha1)
 ```
 #### Generating HOTP Passwords
-After creating a TOTP object, a password can be generated for a counter value (`UInt64`) by using the `generate()` function, for example (where `hotp` is a `HOTP` object):
+After creating a HOTP object, a password can be generated for a counter value (`UInt64`) by using the `generate()` function, for example (where `hotp` is a `HOTP` object):
 ```swift
 if let hotp = HOTP(secret: data) {
     let otpString = hotp.generate(counter: 42)
