@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/lachlanbell/SwiftOTP.svg?branch=master)](https://travis-ci.org/lachlanbell/SwiftOTP)
 [![Version](https://img.shields.io/cocoapods/v/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
 ![Swift Version](https://img.shields.io/badge/Swift-5.0-orange.svg)
@@ -15,6 +16,14 @@ SwiftOTP is available through [CocoaPods](http://cocoapods.org). To install it, 
 pod 'SwiftOTP'
 ```
 Then run `pod install` in the project directory to install.
+
+### Carthage
+SwiftOTP is available through [Carthage](https://github.com/Carthage/Carthage). To install it, simply add the following line to your Cartfile:
+
+```
+github "lachlanbell/SwiftOTP"
+```
+Then run `carthage update` in the project directory and add the resulting frameworks to your project.
 
 ### Swift Package Manager
 You can use [Swift Package Manager](https://swift.org/package-manager/) and specify dependency in `Package.swift` by adding this:
@@ -68,7 +77,7 @@ A HOTP Object can be created with the default settings (6 digits, using HMAC-SHA
 let hotp = HOTP(secret: data, digits: 6, algorithm: .sha1)
 ```
 #### Generating HOTP Passwords
-After creating a TOTP object, a password can be generated for a counter value (`UInt64`) by using the `generate()` function, for example (where `hotp` is a `HOTP` object):
+After creating a HOTP object, a password can be generated for a counter value (`UInt64`) by using the `generate()` function, for example (where `hotp` is a `HOTP` object):
 ```swift
 if let hotp = HOTP(secret: data) {
     let otpString = hotp.generate(counter: 42)

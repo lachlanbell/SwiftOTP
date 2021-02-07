@@ -3,6 +3,9 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftOTP",
+    platforms: [
+        .macOS(.v10_12), .iOS(.v9), .tvOS(.v9), .watchOS(.v4)
+    ],
     products: [
         .library(name: "SwiftOTP", targets: ["SwiftOTP"]),
     ],
