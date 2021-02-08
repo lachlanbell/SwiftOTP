@@ -38,7 +38,7 @@ public struct HOTP {
 	public let secret: Data
 	public let digits: Int
 	public let algorithm: OTPAlgorithm
-	
+
 	/// Initialise counter-based one time password object
 	/// - parameter secret: Secret key data
 	/// - parameter digits: Number of digits for generated string in range 6...8, defaults to 6
@@ -48,22 +48,18 @@ public struct HOTP {
 		self.secret = secret
 		self.digits = digits
 		self.algorithm = algorithm
-		
+
 		guard validateDigits(digit: digits) else { return nil }
 	}
-	
+
 	/// Generate one time password string from counter value
 	/// - parameter counter: UInt64 counter value
 	/// - returns: One time password string, nil if error
 	/// - precondition: Counter value must be of type UInt64
 	public func generate(counter: UInt64) -> String? {
-		if #available(iOS 13.0, *) {
-			return NativeGenerator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: counter, digits: digits)
-		} else {
-			return Generator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: counter, digits: digits)
-		}
+		return Generator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: counter, digits: digits)
 	}
-	
+
 	/// Verify time integer is postive
 	/// - parameter time: Time since Unix epoch (01 Jan 1970 00:00 UTC)
 	/// - returns: Whether time is valid
