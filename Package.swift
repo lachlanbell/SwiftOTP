@@ -14,5 +14,6 @@ let package = Package(
     ],
     targets: [
         .target(name: "SwiftOTP", dependencies: ["Crypto"], path: "SwiftOTP/"),
+        .testTarget(name: "SwiftOTPTests", dependencies: ["SwiftOTP"])
     ]
 )
