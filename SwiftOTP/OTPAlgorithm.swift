@@ -32,7 +32,6 @@
 //  THE SOFTWARE.
 
 import Foundation
-import CryptoKit
 
 /// Hash algorithm to use for one time password generation
 public enum OTPAlgorithm {
