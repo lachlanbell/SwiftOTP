@@ -4,6 +4,9 @@ jobs:
   include:
     - os: linux
       dist: focal
+      addons:
+        apt:
+          update: true
     - os: osx
       osx_image: xcode11
       cache:
