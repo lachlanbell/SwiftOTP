@@ -1,6 +1,6 @@
 # <img src="https://user-images.githubusercontent.com/19360256/34930442-5ed005d4-fa04-11e7-8aea-44179368fcde.png" alt="Logo" width="36" height="36"> SwiftOTP
 
-[![Build Status](https://travis-ci.org/lachlanbell/SwiftOTP.svg?branch=master)](https://travis-ci.org/lachlanbell/SwiftOTP)
+[![Build Status](https://www.travis-ci.com/lachlanbell/SwiftOTP.svg?branch=master)](https://www.travis-ci.com/lachlanbell/SwiftOTP)
 [![Version](https://img.shields.io/cocoapods/v/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/SwiftOTP.svg?style=flat)](http://cocoapods.org/pods/SwiftOTP)
@@ -30,7 +30,7 @@ You can use [Swift Package Manager](https://swift.org/package-manager/) and spec
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/lachlanbell/SwiftOTP.git", .upToNextMinor(from: "2.0.0"))
+    .package(url: "https://github.com/lachlanbell/SwiftOTP.git", .upToNextMinor(from: "3.0.0"))
 ]
 ```
 
