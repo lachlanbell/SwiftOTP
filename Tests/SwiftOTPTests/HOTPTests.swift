@@ -1,8 +1,11 @@
 //
-//  OTPAlgorithm.swift
-//  SwiftOTP
+//  HOTPTests.swift
+//  SwiftOTPTests
 //
-//  Created by Lachlan Bell
+//  Created by Lachlan Bell on 14/1/18.
+//  Copyright © 2018 Lachlan Bell. All rights reserved.
+//
+//  Created by Lachlan Bell on 14/1/18.
 //  Copyright © 2018 Lachlan Bell. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,11 +34,20 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+import XCTest
+@testable import SwiftOTP
 
-/// Hash algorithm to use for one time password generation
-public enum OTPAlgorithm {
-	case sha1
-	case sha256
-	case sha512
+class HOTPTests: XCTestCase {
+	// Test values from Appendix D of RFC4226
+	// https://tools.ietf.org/html/rfc4226#page-32
+	
+	let data = Data(hex: "3132333435363738393031323334353637383930")
+	let expectedOTP = ["755224", "287082", "359152", "969429", "338314", "254676", "287922", "162583", "399871", "520489"]
+	
+	func testHOTP() {
+		let hotp = HOTP(secret: data)!
+		for i in 0...(expectedOTP.count - 1) {
+			XCTAssertEqual(hotp.generate(counter: UInt64(i)), expectedOTP[i])
+		}
+	}
 }

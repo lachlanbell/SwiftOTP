@@ -32,7 +32,14 @@
 //  THE SOFTWARE.
 
 import Foundation
-import CryptoSwift
+
+#if canImport(Crypto)
+// Where available, use Swift Crypto
+// On Apple platforms, this will just re-expose CryptoKit's API
+import Crypto
+#else
+import CryptoKit
+#endif
 
 internal class Generator {
 
@@ -46,14 +53,21 @@ internal class Generator {
 	/// - parameter digits: Number of digits for generated string in range 6...8, defaults to 6
 	/// - returns: One time password string, nil if error
 	func generateOTP(secret: Data, algorithm: OTPAlgorithm = .sha1, counter: UInt64, digits: Int = 6) -> String? {
-		// Get byte array of secret key
-		let key = secret.bytes
-		
 		// HMAC message data from counter as big endian
 		let counterMessage = counter.bigEndian.data
-		
+
 		// HMAC hash counter data with secret key
-		guard let hmac = try? HMAC(key: key, variant: algorithm.hmacVariant).authenticate(counterMessage.bytes) else { return nil }
+		var hmac = Data()
+
+		switch algorithm {
+		case .sha1:
+			hmac = Data(HMAC<Insecure.SHA1>.authenticationCode(for: counterMessage, using: SymmetricKey.init(data: secret)))
+		case .sha256:
+			hmac = Data(HMAC<SHA256>.authenticationCode(for: counterMessage, using: SymmetricKey.init(data: secret)))
+		case .sha512:
+			hmac = Data(HMAC<SHA512>.authenticationCode(for: counterMessage, using: SymmetricKey.init(data: secret)))
+		}
+
 		
 		// Get last 4 bits of hash as offset
 		let offset = Int((hmac.last ?? 0x00) & 0x0f)
@@ -65,7 +79,7 @@ internal class Generator {
 		let data =  Data(truncatedHMAC)
 		
 		// Convert data to UInt32
-		var number = UInt32(strtoul(data.toHexString(), nil, 16))
+		var number = UInt32(strtoul(data.bytes.toHexString(), nil, 16))
 		
 		// Mask most significant bit
 		number &= 0x7fffffff
