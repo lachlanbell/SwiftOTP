@@ -10,7 +10,7 @@ if [[ $TRAVIS_OS_NAME = 'osx' ]]; then
     carthage bootstrap --platform iOS --no-use-binaries --cache-builds
 elif [[ $TRAVIS_OS_NAME = 'linux' ]]; then
     # Install dependencies
-    apt-get install \
+    sudo apt-get install -y \
             binutils \
             git \
             gnupg2 \
