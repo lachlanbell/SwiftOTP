@@ -34,7 +34,7 @@
 import Foundation
 
 /// Time-based one time password object
-public struct TOTP {
+public struct TOTP: Equatable {
 	public let secret: Data
 	public let digits: Int
 	public let timeInterval: Int
