@@ -34,7 +34,7 @@
 import Foundation
 
 /// Hash algorithm to use for one time password generation
-public enum OTPAlgorithm {
+public enum OTPAlgorithm: Codable {
 	case sha1
 	case sha256
 	case sha512
