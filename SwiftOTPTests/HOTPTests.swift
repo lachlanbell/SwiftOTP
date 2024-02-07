@@ -44,8 +44,8 @@ class HOTPTests: XCTestCase {
 	let data = Data(hex: "3132333435363738393031323334353637383930")
 	let expectedOTP = ["755224", "287082", "359152", "969429", "338314", "254676", "287922", "162583", "399871", "520489"]
 	
-	func testHOTP() {
-		let hotp = HOTP(secret: data)!
+	func testHOTP() throws {
+		let hotp = try HOTP(secret: data)
 		for i in 0...(expectedOTP.count - 1) {
 			XCTAssertEqual(hotp.generate(counter: UInt64(i)), expectedOTP[i])
 		}

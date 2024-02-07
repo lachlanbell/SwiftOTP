@@ -44,6 +44,10 @@
 		0E5B38DB200B1B4D00A419CA /* HOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B38DA200B1B4D00A419CA /* HOTP.swift */; };
 		0E5B38DD200B1D3700A419CA /* HOTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B38DC200B1D3700A419CA /* HOTPTests.swift */; };
 		0E5B38DF200B1D4600A419CA /* TOTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B38DE200B1D4600A419CA /* TOTPTests.swift */; };
+		C19F90C52B738C1700E4E7DA /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F90C42B738C1700E4E7DA /* Error.swift */; };
+		C19F90C62B738C1700E4E7DA /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F90C42B738C1700E4E7DA /* Error.swift */; };
+		C19F90C72B738C1700E4E7DA /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F90C42B738C1700E4E7DA /* Error.swift */; };
+		C19F90C82B738C1700E4E7DA /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F90C42B738C1700E4E7DA /* Error.swift */; };
 		FC338DB625460E4300F5871E /* UInt64+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E303A7621A3A742002FB8E0 /* UInt64+Data.swift */; };
 		FC338DB725460E4400F5871E /* UInt64+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E303A7621A3A742002FB8E0 /* UInt64+Data.swift */; };
 		FC338DB825460E4500F5871E /* UInt64+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E303A7621A3A742002FB8E0 /* UInt64+Data.swift */; };
@@ -85,6 +89,7 @@
 		0E5B38DA200B1B4D00A419CA /* HOTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTP.swift; sourceTree = "<group>"; };
 		0E5B38DC200B1D3700A419CA /* HOTPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTPTests.swift; sourceTree = "<group>"; };
 		0E5B38DE200B1D4600A419CA /* TOTPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPTests.swift; sourceTree = "<group>"; };
+		C19F90C42B738C1700E4E7DA /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		FC338DB025460B7300F5871E /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		FC338DB225460DD000F5871E /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
 		FC338DB425460DFB00F5871E /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/watchOS/CryptoSwift.framework; sourceTree = "<group>"; };
@@ -188,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				0E5B38D5200ACD2000A419CA /* Base32 */,
+				C19F90C42B738C1700E4E7DA /* Error.swift */,
 				0E5B38A02008BCB200A419CA /* OTPAlgorithm.swift */,
 				0E5B38DA200B1B4D00A419CA /* HOTP.swift */,
 				0E5B38A12008BCB200A419CA /* TOTP.swift */,
@@ -464,6 +470,7 @@
 				0E45381B2157766000B417E4 /* TOTP.swift in Sources */,
 				0E45381D2157766500B417E4 /* Base32.swift in Sources */,
 				0E4538192157766000B417E4 /* OTPAlgorithm.swift in Sources */,
+				C19F90C62B738C1700E4E7DA /* Error.swift in Sources */,
 				0E2A126825D15D670014486C /* Data+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +486,7 @@
 				0E45383E2157773800B417E4 /* Generator.swift in Sources */,
 				0E4538392157773800B417E4 /* Base32.swift in Sources */,
 				0E45383D2157773800B417E4 /* TOTP.swift in Sources */,
+				C19F90C72B738C1700E4E7DA /* Error.swift in Sources */,
 				0E2A126925D15D670014486C /* Data+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +502,7 @@
 				0E4538442157773800B417E4 /* Generator.swift in Sources */,
 				0E45383F2157773800B417E4 /* Base32.swift in Sources */,
 				0E4538432157773800B417E4 /* TOTP.swift in Sources */,
+				C19F90C82B738C1700E4E7DA /* Error.swift in Sources */,
 				0E2A126A25D15D680014486C /* Data+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +518,7 @@
 				0E5B38D9200ACDBC00A419CA /* Base32.swift in Sources */,
 				0E5B38DB200B1B4D00A419CA /* HOTP.swift in Sources */,
 				0E5B38A32008BCB200A419CA /* OTPAlgorithm.swift in Sources */,
+				C19F90C52B738C1700E4E7DA /* Error.swift in Sources */,
 				0E2A126225D15D670014486C /* Data+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
