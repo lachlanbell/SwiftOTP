@@ -45,45 +45,48 @@ public struct TOTP {
 	/// - parameter digits: Number of digits for generated string in range 6...8, defaults to 6
 	/// - parameter algorithm: The hashing algorithm to use of type OTPAlgorithm, defaults to SHA-1
 	/// - precondition: digits *must* be between 6 and 8 inclusive
-	public init?(secret: Data, digits: Int = 6, timeInterval: Int = 30, algorithm: OTPAlgorithm = .sha1) {
+	public init(secret: Data, digits: Int = 6, timeInterval: Int = 30, algorithm: OTPAlgorithm = .sha1) throws {
 		self.secret = secret
 		self.digits = digits
 		self.timeInterval = timeInterval
 		self.algorithm = algorithm
 
-		guard validateDigits(digit: digits) else { return nil }
+		try validateDigits(digit: digits)
 	}
 
 	/// Generate one time password string from Date object
 	/// - parameter time: Date object to generate password for
 	/// - returns: One time password string, nil if error
-	public func generate(time: Date) -> String? {
+	public func generate(time: Date) throws -> String {
 		let secondsPast1970 = Int(floor(time.timeIntervalSince1970))
-		return generate(secondsPast1970: secondsPast1970)
+		return try generate(secondsPast1970: secondsPast1970)
 	}
 
 	/// Generate one time password string from Unix time
 	/// - parameter secondsPast1970: Time since Unix epoch (01 Jan 1970 00:00 UTC)
 	/// - returns: One time password string, nil if error
 	/// - precondition: secondsPast1970 must be a positive integer
-	public func generate(secondsPast1970: Int) -> String? {
-		guard validateTime(time: secondsPast1970) else { return nil }
+	public func generate(secondsPast1970: Int) throws -> String {
+		try validateTime(time: secondsPast1970)
 		let counterValue = Int(floor(Double(secondsPast1970) / Double(timeInterval)))
 		return Generator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: UInt64(counterValue), digits: digits)
 	}
 
 	/// Check to see if digits value provided is in the range 6...8 (specified in RFC 4226)
 	/// - parameter digit: Number of digits for generated string
-	private func validateDigits(digit: Int) -> Bool{
+	private func validateDigits(digit: Int) throws {
 		let validDigits = 6...8
-		return validDigits.contains(digit)
+		guard validDigits.contains(digit) else {
+			throw OTPError.incorrectDigitsLength(length: digit)
+		}
 	}
 
 	/// Verify time integer is postive
 	/// - parameter time: Time since Unix epoch (01 Jan 1970 00:00 UTC)
 	/// - returns: Whether time is valid
-	private func validateTime(time: Int) -> Bool {
-		return (time > 0)
+	private func validateTime(time: Int) throws {
+		guard (time > 0) else {
+			throw OTPError.invalidTimeIntervalSince1970
+		}
 	}
-
 }

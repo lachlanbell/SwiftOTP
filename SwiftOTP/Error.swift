@@ -1,9 +1,9 @@
 //
-//  HOTP.swift
+//  Error.swift
 //  SwiftOTP
 //
-//  Created by Lachlan Bell on 14/1/18.
-//  Copyright © 2018 Lachlan Bell. All rights reserved.
+//  Created by Akivili Collindort on 2024/2/7.
+//	Copyright © 2024 Lachlan Bell. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -33,40 +33,18 @@
 
 import Foundation
 
-/// Counter-based one time password object
-public struct HOTP {
-	public let secret: Data
-	public let digits: Int
-	public let algorithm: OTPAlgorithm
+enum OTPError: Error {
+	case incorrectDigitsLength(length: Int)
+	case invalidTimeIntervalSince1970
+}
 
-	/// Initialise counter-based one time password object
-	/// - parameter secret: Secret key data
-	/// - parameter digits: Number of digits for generated string in range 6...8, defaults to 6
-	/// - parameter algorithm: The hashing algorithm to use of type OTPAlgorithm, defaults to SHA-1
-	/// - precondition: digits *must* be between 6 and 8 inclusive
-	public init(secret: Data, digits: Int = 6, algorithm: OTPAlgorithm = .sha1) throws {
-		self.secret = secret
-		self.digits = digits
-		self.algorithm = algorithm
-
-		try validateDigits(digit: digits)
-	}
-
-	/// Generate one time password string from counter value
-	/// - parameter counter: UInt64 counter value
-	/// - returns: One time password string, nil if error
-	/// - precondition: Counter value must be of type UInt64
-	public func generate(counter: UInt64) -> String {
-		return Generator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: counter, digits: digits)
-	}
-
-	/// Verify time integer is postive
-	/// - parameter time: Time since Unix epoch (01 Jan 1970 00:00 UTC)
-	/// - returns: Whether time is valid
-	private func validateDigits(digit: Int) throws {
-		let validDigits = 6...8
-		guard validDigits.contains(digit) else {
-			throw OTPError.incorrectDigitsLength(length: digit)
+extension OTPError: CustomStringConvertible {
+	var description: String {
+		switch self {
+		case .incorrectDigitsLength(let length):
+			"Length of digit should be between 6 and 8, not \(length)."
+		case .invalidTimeIntervalSince1970:
+			"Time interval since 1970 must be positive."
 		}
 	}
 }
