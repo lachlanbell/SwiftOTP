@@ -63,7 +63,7 @@ if let totp = TOTP(secret: data) {
     let otpString = totp.generate(secondsPast1970: 1234567890)
 }
 ```
-Note: only `Int` values are accepted by this function, and must be positive.
+Note: only `UInt` values are accepted by this function to enforce positivity.
 
 ### HOTP (HMAC-Based One Time Password (counter-based))
 

@@ -56,20 +56,20 @@ public struct TOTP {
 
 	/// Generate one time password string from Date object
 	/// - parameter time: Date object to generate password for
-	/// - returns: One time password string, nil if error
+	/// - returns: One time password string, nil if `Date` doesn't pass precondition.
+	/// - precondition: `time` must be a `Date` at or after Unix epoch (01 Jan 1970 00:00 UTC)
 	public func generate(time: Date) -> String? {
-		let secondsPast1970 = Int(floor(time.timeIntervalSince1970))
-		return generate(secondsPast1970: secondsPast1970)
+		let secondsPast1970 = floor(time.timeIntervalSince1970)
+		guard secondsPast1970 >= TimeInterval(UInt64.min) else { return nil }
+		return generate(secondsPast1970: .init(secondsPast1970))
 	}
 
 	/// Generate one time password string from Unix time
 	/// - parameter secondsPast1970: Time since Unix epoch (01 Jan 1970 00:00 UTC)
 	/// - returns: One time password string, nil if error
-	/// - precondition: secondsPast1970 must be a positive integer
-	public func generate(secondsPast1970: Int) -> String? {
-		guard validateTime(time: secondsPast1970) else { return nil }
-		let counterValue = Int(floor(Double(secondsPast1970) / Double(timeInterval)))
-		return Generator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: UInt64(counterValue), digits: digits)
+	public func generate(secondsPast1970: UInt) -> String {
+		let counterValue = UInt64(floor(Double(secondsPast1970) / Double(timeInterval)))
+		return Generator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: counterValue, digits: digits)
 	}
 
 	/// Check to see if digits value provided is in the range 6...8 (specified in RFC 4226)
@@ -78,12 +78,4 @@ public struct TOTP {
 		let validDigits = 6...8
 		return validDigits.contains(digit)
 	}
-
-	/// Verify time integer is postive
-	/// - parameter time: Time since Unix epoch (01 Jan 1970 00:00 UTC)
-	/// - returns: Whether time is valid
-	private func validateTime(time: Int) -> Bool {
-		return (time > 0)
-	}
-
 }
