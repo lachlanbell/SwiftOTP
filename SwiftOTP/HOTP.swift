@@ -34,7 +34,7 @@
 import Foundation
 
 /// Counter-based one time password object
-public struct HOTP {
+public struct HOTP: Equatable {
 	public let secret: Data
 	public let digits: Int
 	public let algorithm: OTPAlgorithm
