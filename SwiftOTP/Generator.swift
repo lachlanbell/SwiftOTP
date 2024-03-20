@@ -57,7 +57,7 @@ internal class Generator {
 		let counterMessage = counter.bigEndian.data
 
 		// HMAC hash counter data with secret key
-		var hmac = Data()
+        let hmac: Data
 
 		switch algorithm {
 		case .sha1:
