@@ -60,7 +60,7 @@ public struct HOTP {
 		return Generator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: counter, digits: digits)
 	}
 
-	/// Verify time integer is postive
+	/// Verify time integer is positive
 	/// - parameter time: Time since Unix epoch (01 Jan 1970 00:00 UTC)
 	/// - returns: Whether time is valid
 	private func validateDigits(digit: Int) -> Bool{
