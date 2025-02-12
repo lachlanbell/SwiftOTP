@@ -79,7 +79,7 @@ public struct TOTP {
 		return validDigits.contains(digit)
 	}
 
-	/// Verify time integer is postive
+	/// Verify time integer is positive
 	/// - parameter time: Time since Unix epoch (01 Jan 1970 00:00 UTC)
 	/// - returns: Whether time is valid
 	private func validateTime(time: Int) -> Bool {
