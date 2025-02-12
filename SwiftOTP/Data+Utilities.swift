@@ -15,7 +15,7 @@
 
 /*
  *	Data utilities from CryptoSwift. CryptoSwift has been dropped as a dependency,
- *	but these are preserved to maintain API compatability with earlier versions
+ *	but these are preserved to maintain API compatibility with earlier versions
  * 	of SwiftOTP.
  */
 
