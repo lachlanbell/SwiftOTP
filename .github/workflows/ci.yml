@@ -1,0 +1,18 @@
+name: CI
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04-arm
+    container: swift:latest
+    steps:
+    - uses: actions/checkout@v5
+    - run: swift build --build-tests
+    - run: swift test --skip-build --enable-swift-testing --parallel
+  lint:
+    runs-on: ubuntu-24.04-arm
+    container: swift:latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: swift format lint -r -p -s .
