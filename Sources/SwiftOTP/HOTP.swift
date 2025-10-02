@@ -57,7 +57,7 @@ public struct HOTP {
 	/// - returns: One time password string, nil if error
 	/// - precondition: Counter value must be of type UInt64
 	public func generate(counter: UInt64) -> String? {
-		return Generator.shared.generateOTP(secret: secret, algorithm: algorithm, counter: counter, digits: digits)
+		return Generator().generateOTP(secret: secret, algorithm: algorithm, counter: counter, digits: digits)
 	}
 
 	/// Verify time integer is positive

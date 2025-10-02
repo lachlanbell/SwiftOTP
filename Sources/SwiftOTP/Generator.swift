@@ -44,7 +44,7 @@ import CryptoKit
 internal class Generator {
 
 	// Generator singleton
-	static let shared = Generator()
+//	static let shared = Generator()
 	
 	/// Generates a one time password string
 	/// - parameter secret: The secret key data
