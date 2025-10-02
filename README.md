@@ -9,21 +9,6 @@
 
 SwiftOTP is a Swift library for generating One Time Passwords (OTP) commonly used for two factor authentication. SwiftOTP supports both HMAC-Based One Time Passwords (HOTP) and Time Based One Time Passwords (TOTP) defined in [RFC 4226](https://tools.ietf.org/html/rfc4226) and [RFC 6238](https://tools.ietf.org/html/rfc6238) respectively.
 ## Installation
-### CocoaPods
-SwiftOTP is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
-
-```ruby
-pod 'SwiftOTP'
-```
-Then run `pod install` in the project directory to install.
-
-### Carthage
-SwiftOTP is available through [Carthage](https://github.com/Carthage/Carthage). To install it, simply add the following line to your Cartfile:
-
-```
-github "lachlanbell/SwiftOTP"
-```
-Then run `carthage update` in the project directory and add the resulting frameworks to your project.
 
 ### Swift Package Manager
 You can use [Swift Package Manager](https://swift.org/package-manager/) and specify dependency in `Package.swift` by adding this:
@@ -107,12 +92,6 @@ SwiftOTP supports HMAC with SHA1 as specified in [RFC 4226](https://tools.ietf.o
 
 #### Digit Length
 Both the `TOTP` and `HOTP` objects only accept a digit length value between 6 and 8, as specified in [RFC 4226](https://tools.ietf.org/html/rfc4226). Both objects will be `nil` if an invalid digit length value is provided.
-
-## Older Swift Versions
-Use the corresponding branch for using an older Swift version (4.0 and greater). For example:
-```ruby
-pod 'SwiftOTP', :git => 'https://github.com/lachlanbell/SwiftOTP.git', :branch => 'swift-4.0'
-```
 
 ## License
 SwiftOTP is available under the MIT license. See the LICENSE file for more info.
