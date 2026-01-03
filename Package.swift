@@ -11,8 +11,7 @@ let package = Package(
         .library(name: "SwiftOTP-Dynamic", type: .dynamic, targets: ["SwiftOTP"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-crypto.git", "1.0.0" 
-..< "4.0.0")
+        .package(url: "https://github.com/apple/swift-crypto.git", from: "4.2.0")
     ],
     targets: [
         .target(name: "SwiftOTP", dependencies: ["Crypto"], path: "SwiftOTP/"),
