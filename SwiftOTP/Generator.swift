@@ -52,7 +52,7 @@ internal class Generator {
 	/// - parameter counter: UInt64 Counter value
 	/// - parameter digits: Number of digits for generated string in range 6...8, defaults to 6
 	/// - returns: One time password string, nil if error
-	func generateOTP(secret: Data, algorithm: OTPAlgorithm = .sha1, counter: UInt64, digits: Int = 6) -> String? {
+	func generateOTP(secret: Data, algorithm: OTPAlgorithm = .sha1, counter: UInt64, digits: Int = 6) -> String {
 		// HMAC message data from counter as big endian
 		let counterMessage = counter.bigEndian.data
 
